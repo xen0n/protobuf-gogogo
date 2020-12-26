@@ -7,7 +7,7 @@
 package genid
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoreflect "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
 )
 
 const File_google_protobuf_empty_proto = "google/protobuf/empty.proto"

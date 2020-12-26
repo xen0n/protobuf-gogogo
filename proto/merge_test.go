@@ -12,17 +12,17 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/internal/protobuild"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/testing/protocmp"
-	"google.golang.org/protobuf/testing/protopack"
-	"google.golang.org/protobuf/types/dynamicpb"
+	"github.com/xen0n/protobuf-gogogo/encoding/prototext"
+	"github.com/xen0n/protobuf-gogogo/internal/protobuild"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	"github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	"github.com/xen0n/protobuf-gogogo/testing/protocmp"
+	"github.com/xen0n/protobuf-gogogo/testing/protopack"
+	"github.com/xen0n/protobuf-gogogo/types/dynamicpb"
 
-	legacypb "google.golang.org/protobuf/internal/testprotos/legacy"
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	test3pb "google.golang.org/protobuf/internal/testprotos/test3"
+	legacypb "github.com/xen0n/protobuf-gogogo/internal/testprotos/legacy"
+	testpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test"
+	test3pb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test3"
 )
 
 type testMerge struct {

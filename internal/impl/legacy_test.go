@@ -13,17 +13,17 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	pimpl "google.golang.org/protobuf/internal/impl"
-	"google.golang.org/protobuf/internal/pragma"
-	"google.golang.org/protobuf/proto"
-	pdesc "google.golang.org/protobuf/reflect/protodesc"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
-	preg "google.golang.org/protobuf/reflect/protoregistry"
-	piface "google.golang.org/protobuf/runtime/protoiface"
+	"github.com/xen0n/protobuf-gogogo/encoding/prototext"
+	pimpl "github.com/xen0n/protobuf-gogogo/internal/impl"
+	"github.com/xen0n/protobuf-gogogo/internal/pragma"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	pdesc "github.com/xen0n/protobuf-gogogo/reflect/protodesc"
+	pref "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	preg "github.com/xen0n/protobuf-gogogo/reflect/protoregistry"
+	piface "github.com/xen0n/protobuf-gogogo/runtime/protoiface"
 
-	proto2_20180125 "google.golang.org/protobuf/internal/testprotos/legacy/proto2_20180125_92554152"
-	"google.golang.org/protobuf/types/descriptorpb"
+	proto2_20180125 "github.com/xen0n/protobuf-gogogo/internal/testprotos/legacy/proto2_20180125_92554152"
+	"github.com/xen0n/protobuf-gogogo/types/descriptorpb"
 )
 
 type LegacyTestMessage struct {

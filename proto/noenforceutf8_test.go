@@ -7,16 +7,16 @@ package proto_test
 import (
 	"reflect"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/internal/flags"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protodesc"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoimpl"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/xen0n/protobuf-gogogo/encoding/prototext"
+	"github.com/xen0n/protobuf-gogogo/internal/filedesc"
+	"github.com/xen0n/protobuf-gogogo/internal/flags"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	"github.com/xen0n/protobuf-gogogo/reflect/protodesc"
+	"github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	"github.com/xen0n/protobuf-gogogo/runtime/protoimpl"
+	"github.com/xen0n/protobuf-gogogo/testing/protopack"
 
-	"google.golang.org/protobuf/types/descriptorpb"
+	"github.com/xen0n/protobuf-gogogo/types/descriptorpb"
 )
 
 func init() {

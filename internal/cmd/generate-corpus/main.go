@@ -15,12 +15,12 @@ import (
 	"io/ioutil"
 	"log"
 
-	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/proto"
+	"github.com/xen0n/protobuf-gogogo/encoding/protojson"
+	"github.com/xen0n/protobuf-gogogo/encoding/prototext"
+	"github.com/xen0n/protobuf-gogogo/proto"
 
-	fuzzpb "google.golang.org/protobuf/internal/testprotos/fuzz"
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
+	fuzzpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/fuzz"
+	testpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test"
 )
 
 var messages = []proto.Message{

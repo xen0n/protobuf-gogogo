@@ -10,10 +10,10 @@ import (
 	"math"
 	"unicode/utf8"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/strs"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/xen0n/protobuf-gogogo/encoding/protowire"
+	"github.com/xen0n/protobuf-gogogo/internal/errors"
+	"github.com/xen0n/protobuf-gogogo/internal/strs"
+	"github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
 )
 
 // unmarshalScalar decodes a value of the given kind.

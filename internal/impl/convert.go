@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"reflect"
 
-	pref "google.golang.org/protobuf/reflect/protoreflect"
+	pref "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
 )
 
 // unwrapper unwraps the value to the underlying value.

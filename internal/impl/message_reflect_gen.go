@@ -7,8 +7,8 @@
 package impl
 
 import (
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoiface"
+	"github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	"github.com/xen0n/protobuf-gogogo/runtime/protoiface"
 )
 
 func (m *messageState) Descriptor() protoreflect.MessageDescriptor {

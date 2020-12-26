@@ -11,19 +11,19 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/internal/msgfmt"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/testing/protocmp"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/xen0n/protobuf-gogogo/internal/detrand"
+	"github.com/xen0n/protobuf-gogogo/internal/msgfmt"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	"github.com/xen0n/protobuf-gogogo/testing/protocmp"
+	"github.com/xen0n/protobuf-gogogo/testing/protopack"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	textpb "google.golang.org/protobuf/internal/testprotos/textpb2"
-	dynpb "google.golang.org/protobuf/types/dynamicpb"
-	anypb "google.golang.org/protobuf/types/known/anypb"
-	durpb "google.golang.org/protobuf/types/known/durationpb"
-	tspb "google.golang.org/protobuf/types/known/timestamppb"
-	wpb "google.golang.org/protobuf/types/known/wrapperspb"
+	testpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test"
+	textpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/textpb2"
+	dynpb "github.com/xen0n/protobuf-gogogo/types/dynamicpb"
+	anypb "github.com/xen0n/protobuf-gogogo/types/known/anypb"
+	durpb "github.com/xen0n/protobuf-gogogo/types/known/durationpb"
+	tspb "github.com/xen0n/protobuf-gogogo/types/known/timestamppb"
+	wpb "github.com/xen0n/protobuf-gogogo/types/known/wrapperspb"
 )
 
 func init() {

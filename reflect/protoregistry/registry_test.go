@@ -12,14 +12,14 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	pimpl "google.golang.org/protobuf/internal/impl"
-	pdesc "google.golang.org/protobuf/reflect/protodesc"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
-	preg "google.golang.org/protobuf/reflect/protoregistry"
+	"github.com/xen0n/protobuf-gogogo/encoding/prototext"
+	pimpl "github.com/xen0n/protobuf-gogogo/internal/impl"
+	pdesc "github.com/xen0n/protobuf-gogogo/reflect/protodesc"
+	pref "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	preg "github.com/xen0n/protobuf-gogogo/reflect/protoregistry"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/registry"
-	"google.golang.org/protobuf/types/descriptorpb"
+	testpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/registry"
+	"github.com/xen0n/protobuf-gogogo/types/descriptorpb"
 )
 
 func mustMakeFile(s string) pref.FileDescriptor {

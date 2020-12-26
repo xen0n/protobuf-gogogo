@@ -41,14 +41,14 @@
 package conformance
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	anypb "google.golang.org/protobuf/types/known/anypb"
-	durationpb "google.golang.org/protobuf/types/known/durationpb"
-	fieldmaskpb "google.golang.org/protobuf/types/known/fieldmaskpb"
-	structpb "google.golang.org/protobuf/types/known/structpb"
-	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
+	protoreflect "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	protoimpl "github.com/xen0n/protobuf-gogogo/runtime/protoimpl"
+	anypb "github.com/xen0n/protobuf-gogogo/types/known/anypb"
+	durationpb "github.com/xen0n/protobuf-gogogo/types/known/durationpb"
+	fieldmaskpb "github.com/xen0n/protobuf-gogogo/types/known/fieldmaskpb"
+	structpb "github.com/xen0n/protobuf-gogogo/types/known/structpb"
+	timestamppb "github.com/xen0n/protobuf-gogogo/types/known/timestamppb"
+	wrapperspb "github.com/xen0n/protobuf-gogogo/types/known/wrapperspb"
 	reflect "reflect"
 	sync "sync"
 )

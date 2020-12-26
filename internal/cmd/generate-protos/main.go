@@ -21,49 +21,49 @@ import (
 	"strconv"
 	"strings"
 
-	gengo "google.golang.org/protobuf/cmd/protoc-gen-go/internal_gengo"
-	"google.golang.org/protobuf/compiler/protogen"
-	"google.golang.org/protobuf/internal/detrand"
+	gengo "github.com/xen0n/protobuf-gogogo/cmd/protoc-gen-go/internal_gengo"
+	"github.com/xen0n/protobuf-gogogo/compiler/protogen"
+	"github.com/xen0n/protobuf-gogogo/internal/detrand"
 )
 
 // Override the location of the Go package for various source files.
 // TOOD: Commit these changes upstream.
 var protoPackages = map[string]string{
-	"google/protobuf/any.proto":                  "google.golang.org/protobuf/types/known/anypb;anypb",
-	"google/protobuf/api.proto":                  "google.golang.org/protobuf/types/known/apipb;apipb",
-	"google/protobuf/duration.proto":             "google.golang.org/protobuf/types/known/durationpb;durationpb",
-	"google/protobuf/empty.proto":                "google.golang.org/protobuf/types/known/emptypb;emptypb",
-	"google/protobuf/field_mask.proto":           "google.golang.org/protobuf/types/known/fieldmaskpb;fieldmaskpb",
-	"google/protobuf/source_context.proto":       "google.golang.org/protobuf/types/known/sourcecontextpb;sourcecontextpb",
-	"google/protobuf/struct.proto":               "google.golang.org/protobuf/types/known/structpb;structpb",
-	"google/protobuf/timestamp.proto":            "google.golang.org/protobuf/types/known/timestamppb;timestamppb",
-	"google/protobuf/type.proto":                 "google.golang.org/protobuf/types/known/typepb;typepb",
-	"google/protobuf/wrappers.proto":             "google.golang.org/protobuf/types/known/wrapperspb;wrapperspb",
-	"google/protobuf/descriptor.proto":           "google.golang.org/protobuf/types/descriptorpb;descriptorpb",
-	"google/protobuf/compiler/plugin.proto":      "google.golang.org/protobuf/types/pluginpb;pluginpb",
-	"conformance/conformance.proto":              "google.golang.org/protobuf/internal/testprotos/conformance;conformance",
-	"google/protobuf/test_messages_proto2.proto": "google.golang.org/protobuf/internal/testprotos/conformance;conformance",
-	"google/protobuf/test_messages_proto3.proto": "google.golang.org/protobuf/internal/testprotos/conformance;conformance",
+	"google/protobuf/any.proto":                  "github.com/xen0n/protobuf-gogogo/types/known/anypb;anypb",
+	"google/protobuf/api.proto":                  "github.com/xen0n/protobuf-gogogo/types/known/apipb;apipb",
+	"google/protobuf/duration.proto":             "github.com/xen0n/protobuf-gogogo/types/known/durationpb;durationpb",
+	"google/protobuf/empty.proto":                "github.com/xen0n/protobuf-gogogo/types/known/emptypb;emptypb",
+	"google/protobuf/field_mask.proto":           "github.com/xen0n/protobuf-gogogo/types/known/fieldmaskpb;fieldmaskpb",
+	"google/protobuf/source_context.proto":       "github.com/xen0n/protobuf-gogogo/types/known/sourcecontextpb;sourcecontextpb",
+	"google/protobuf/struct.proto":               "github.com/xen0n/protobuf-gogogo/types/known/structpb;structpb",
+	"google/protobuf/timestamp.proto":            "github.com/xen0n/protobuf-gogogo/types/known/timestamppb;timestamppb",
+	"google/protobuf/type.proto":                 "github.com/xen0n/protobuf-gogogo/types/known/typepb;typepb",
+	"google/protobuf/wrappers.proto":             "github.com/xen0n/protobuf-gogogo/types/known/wrapperspb;wrapperspb",
+	"google/protobuf/descriptor.proto":           "github.com/xen0n/protobuf-gogogo/types/descriptorpb;descriptorpb",
+	"google/protobuf/compiler/plugin.proto":      "github.com/xen0n/protobuf-gogogo/types/pluginpb;pluginpb",
+	"conformance/conformance.proto":              "github.com/xen0n/protobuf-gogogo/internal/testprotos/conformance;conformance",
+	"google/protobuf/test_messages_proto2.proto": "github.com/xen0n/protobuf-gogogo/internal/testprotos/conformance;conformance",
+	"google/protobuf/test_messages_proto3.proto": "github.com/xen0n/protobuf-gogogo/internal/testprotos/conformance;conformance",
 
-	"benchmarks.proto": "google.golang.org/protobuf/internal/testprotos/benchmarks;benchmarks",
-	"datasets/google_message1/proto2/benchmark_message1_proto2.proto": "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message1/proto2;proto2",
-	"datasets/google_message1/proto3/benchmark_message1_proto3.proto": "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message1/proto3;proto3",
-	"datasets/google_message2/benchmark_message2.proto":               "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message2;google_message2",
-	"datasets/google_message3/benchmark_message3.proto":               "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message3/benchmark_message3_1.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message3/benchmark_message3_2.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message3/benchmark_message3_3.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message3/benchmark_message3_4.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message3/benchmark_message3_5.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message3/benchmark_message3_6.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message3/benchmark_message3_7.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message3/benchmark_message3_8.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
-	"datasets/google_message4/benchmark_message4.proto":               "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message4;google_message4",
-	"datasets/google_message4/benchmark_message4_1.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message4;google_message4",
-	"datasets/google_message4/benchmark_message4_2.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message4;google_message4",
-	"datasets/google_message4/benchmark_message4_3.proto":             "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message4;google_message4",
+	"benchmarks.proto": "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks;benchmarks",
+	"datasets/google_message1/proto2/benchmark_message1_proto2.proto": "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message1/proto2;proto2",
+	"datasets/google_message1/proto3/benchmark_message1_proto3.proto": "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message1/proto3;proto3",
+	"datasets/google_message2/benchmark_message2.proto":               "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message2;google_message2",
+	"datasets/google_message3/benchmark_message3.proto":               "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message3/benchmark_message3_1.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message3/benchmark_message3_2.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message3/benchmark_message3_3.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message3/benchmark_message3_4.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message3/benchmark_message3_5.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message3/benchmark_message3_6.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message3/benchmark_message3_7.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message3/benchmark_message3_8.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3;google_message3",
+	"datasets/google_message4/benchmark_message4.proto":               "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message4;google_message4",
+	"datasets/google_message4/benchmark_message4_1.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message4;google_message4",
+	"datasets/google_message4/benchmark_message4_2.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message4;google_message4",
+	"datasets/google_message4/benchmark_message4_3.proto":             "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message4;google_message4",
 
-	"cmd/protoc-gen-go/testdata/nopackage/nopackage.proto": "google.golang.org/protobuf/cmd/protoc-gen-go/testdata/nopackage",
+	"cmd/protoc-gen-go/testdata/nopackage/nopackage.proto": "github.com/xen0n/protobuf-gogogo/cmd/protoc-gen-go/testdata/nopackage",
 }
 
 func init() {
@@ -298,7 +298,7 @@ func generateIdentifiers(gen *protogen.Plugin, file *protogen.File) {
 
 	var processEnums func([]*protogen.Enum)
 	var processMessages func([]*protogen.Message)
-	const protoreflectPackage = protogen.GoImportPath("google.golang.org/protobuf/reflect/protoreflect")
+	const protoreflectPackage = protogen.GoImportPath("github.com/xen0n/protobuf-gogogo/reflect/protoreflect")
 	processEnums = func(enums []*protogen.Enum) {
 		for _, enum := range enums {
 			g.P("// Full and short names for ", enum.Desc.FullName(), ".")

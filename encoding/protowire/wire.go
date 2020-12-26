@@ -6,7 +6,7 @@
 // See https://developers.google.com/protocol-buffers/docs/encoding.
 //
 // For marshaling and unmarshaling entire protobuf messages,
-// use the "google.golang.org/protobuf/proto" package instead.
+// use the "github.com/xen0n/protobuf-gogogo/proto" package instead.
 package protowire
 
 import (
@@ -14,7 +14,7 @@ import (
 	"math"
 	"math/bits"
 
-	"google.golang.org/protobuf/internal/errors"
+	"github.com/xen0n/protobuf-gogogo/internal/errors"
 )
 
 // Number represents the field number.

@@ -36,8 +36,8 @@
 package proto3
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	protoreflect "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	protoimpl "github.com/xen0n/protobuf-gogogo/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 )

@@ -12,9 +12,9 @@ import (
 	"strconv"
 	"strings"
 
-	"google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/internal/pragma"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/xen0n/protobuf-gogogo/internal/detrand"
+	"github.com/xen0n/protobuf-gogogo/internal/pragma"
+	pref "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
 )
 
 type list interface {

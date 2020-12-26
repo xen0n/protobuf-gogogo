@@ -9,16 +9,16 @@ import (
 	"strings"
 	"testing"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/internal/flags"
-	"google.golang.org/protobuf/proto"
-	preg "google.golang.org/protobuf/reflect/protoregistry"
+	"github.com/xen0n/protobuf-gogogo/encoding/prototext"
+	"github.com/xen0n/protobuf-gogogo/internal/flags"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	preg "github.com/xen0n/protobuf-gogogo/reflect/protoregistry"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	weakpb "google.golang.org/protobuf/internal/testprotos/test/weak1"
-	pb2 "google.golang.org/protobuf/internal/testprotos/textpb2"
-	pb3 "google.golang.org/protobuf/internal/testprotos/textpb3"
-	"google.golang.org/protobuf/types/known/anypb"
+	testpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test"
+	weakpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test/weak1"
+	pb2 "github.com/xen0n/protobuf-gogogo/internal/testprotos/textpb2"
+	pb3 "github.com/xen0n/protobuf-gogogo/internal/testprotos/textpb3"
+	"github.com/xen0n/protobuf-gogogo/types/known/anypb"
 )
 
 func TestUnmarshal(t *testing.T) {

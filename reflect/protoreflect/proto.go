@@ -23,7 +23,7 @@
 // The protobuf descriptor interfaces are not meant to be implemented by
 // user code since they might need to be extended in the future to support
 // additions to the protobuf language.
-// The "google.golang.org/protobuf/reflect/protodesc" package converts between
+// The "github.com/xen0n/protobuf-gogogo/reflect/protodesc" package converts between
 // google.protobuf.DescriptorProto messages and protobuf descriptors.
 //
 //
@@ -38,7 +38,7 @@
 // where the Type and ProtoReflect.Type accessors respectively
 // return the protobuf descriptor for the values.
 //
-// The "google.golang.org/protobuf/types/dynamicpb" package can be used to
+// The "github.com/xen0n/protobuf-gogogo/types/dynamicpb" package can be used to
 // create Go type descriptors from protobuf descriptors.
 //
 //
@@ -130,8 +130,8 @@ import (
 	"fmt"
 	"strings"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/pragma"
+	"github.com/xen0n/protobuf-gogogo/encoding/protowire"
+	"github.com/xen0n/protobuf-gogogo/internal/pragma"
 )
 
 type doNotImplement pragma.DoNotImplement

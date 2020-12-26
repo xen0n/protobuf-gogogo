@@ -11,22 +11,22 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/internal/flags"
-	"google.golang.org/protobuf/proto"
-	preg "google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/xen0n/protobuf-gogogo/encoding/protojson"
+	"github.com/xen0n/protobuf-gogogo/internal/detrand"
+	"github.com/xen0n/protobuf-gogogo/internal/flags"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	preg "github.com/xen0n/protobuf-gogogo/reflect/protoregistry"
+	"github.com/xen0n/protobuf-gogogo/testing/protopack"
 
-	pb2 "google.golang.org/protobuf/internal/testprotos/textpb2"
-	pb3 "google.golang.org/protobuf/internal/testprotos/textpb3"
-	"google.golang.org/protobuf/types/known/anypb"
-	"google.golang.org/protobuf/types/known/durationpb"
-	"google.golang.org/protobuf/types/known/emptypb"
-	"google.golang.org/protobuf/types/known/fieldmaskpb"
-	"google.golang.org/protobuf/types/known/structpb"
-	"google.golang.org/protobuf/types/known/timestamppb"
-	"google.golang.org/protobuf/types/known/wrapperspb"
+	pb2 "github.com/xen0n/protobuf-gogogo/internal/testprotos/textpb2"
+	pb3 "github.com/xen0n/protobuf-gogogo/internal/testprotos/textpb3"
+	"github.com/xen0n/protobuf-gogogo/types/known/anypb"
+	"github.com/xen0n/protobuf-gogogo/types/known/durationpb"
+	"github.com/xen0n/protobuf-gogogo/types/known/emptypb"
+	"github.com/xen0n/protobuf-gogogo/types/known/fieldmaskpb"
+	"github.com/xen0n/protobuf-gogogo/types/known/structpb"
+	"github.com/xen0n/protobuf-gogogo/types/known/timestamppb"
+	"github.com/xen0n/protobuf-gogogo/types/known/wrapperspb"
 )
 
 // Disable detrand to enable direct comparisons on outputs.

@@ -5,18 +5,18 @@
 package proto_test
 
 import (
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/impl"
-	"google.golang.org/protobuf/internal/protobuild"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/xen0n/protobuf-gogogo/encoding/protowire"
+	"github.com/xen0n/protobuf-gogogo/internal/impl"
+	"github.com/xen0n/protobuf-gogogo/internal/protobuild"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	"github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	"github.com/xen0n/protobuf-gogogo/reflect/protoregistry"
+	"github.com/xen0n/protobuf-gogogo/testing/protopack"
 
-	legacypb "google.golang.org/protobuf/internal/testprotos/legacy"
-	requiredpb "google.golang.org/protobuf/internal/testprotos/required"
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	test3pb "google.golang.org/protobuf/internal/testprotos/test3"
+	legacypb "github.com/xen0n/protobuf-gogogo/internal/testprotos/legacy"
+	requiredpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/required"
+	testpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test"
+	test3pb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test3"
 )
 
 type testProto struct {

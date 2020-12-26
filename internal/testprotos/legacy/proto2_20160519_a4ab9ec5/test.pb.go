@@ -18,7 +18,7 @@ It has these top-level messages:
 */
 package proto2_20160519_a4ab9ec5
 
-import proto "google.golang.org/protobuf/internal/protolegacy"
+import proto "github.com/xen0n/protobuf-gogogo/internal/protolegacy"
 import fmt "fmt"
 import math "math"
 

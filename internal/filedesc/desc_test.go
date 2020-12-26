@@ -14,13 +14,13 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	detrand "google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/proto"
-	pdesc "google.golang.org/protobuf/reflect/protodesc"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
+	detrand "github.com/xen0n/protobuf-gogogo/internal/detrand"
+	"github.com/xen0n/protobuf-gogogo/internal/filedesc"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	pdesc "github.com/xen0n/protobuf-gogogo/reflect/protodesc"
+	pref "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
 
-	"google.golang.org/protobuf/types/descriptorpb"
+	"github.com/xen0n/protobuf-gogogo/types/descriptorpb"
 )
 
 func init() {

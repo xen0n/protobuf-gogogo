@@ -7,9 +7,9 @@ package proto_test
 import (
 	"testing"
 
-	"google.golang.org/protobuf/proto"
+	"github.com/xen0n/protobuf-gogogo/proto"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
+	testpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/test"
 )
 
 func TestReset(t *testing.T) {

@@ -15,18 +15,18 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/proto"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
-	preg "google.golang.org/protobuf/reflect/protoregistry"
+	"github.com/xen0n/protobuf-gogogo/encoding/protojson"
+	"github.com/xen0n/protobuf-gogogo/encoding/prototext"
+	"github.com/xen0n/protobuf-gogogo/proto"
+	pref "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	preg "github.com/xen0n/protobuf-gogogo/reflect/protoregistry"
 
-	benchpb "google.golang.org/protobuf/internal/testprotos/benchmarks"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message1/proto2"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message1/proto3"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message2"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message4"
+	benchpb "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks"
+	_ "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message1/proto2"
+	_ "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message1/proto3"
+	_ "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message2"
+	_ "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message3"
+	_ "github.com/xen0n/protobuf-gogogo/internal/testprotos/benchmarks/datasets/google_message4"
 )
 
 func BenchmarkWire(b *testing.B) {

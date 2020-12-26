@@ -13,8 +13,8 @@ import (
 	"math"
 	"reflect"
 
-	pref "google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
+	pref "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	"github.com/xen0n/protobuf-gogogo/reflect/protoregistry"
 )
 
 // A Value is a value assignable to a field.

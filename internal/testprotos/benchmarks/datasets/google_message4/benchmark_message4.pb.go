@@ -36,9 +36,9 @@
 package google_message4
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoiface "google.golang.org/protobuf/runtime/protoiface"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	protoreflect "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	protoiface "github.com/xen0n/protobuf-gogogo/runtime/protoiface"
+	protoimpl "github.com/xen0n/protobuf-gogogo/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 )
