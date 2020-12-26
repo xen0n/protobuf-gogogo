@@ -35,9 +35,9 @@
 package gogoproto
 
 import (
-	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	descriptorpb "github.com/xen0n/protobuf-gogogo/types/descriptorpb"
+	protoreflect "github.com/xen0n/protobuf-gogogo/reflect/protoreflect"
+	protoimpl "github.com/xen0n/protobuf-gogogo/runtime/protoimpl"
 	reflect "reflect"
 )
 
@@ -50,7 +50,7 @@ const (
 
 var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 	{
-		ExtendedType:  (*descriptor.EnumOptions)(nil),
+		ExtendedType:  (*descriptorpb.EnumOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         62001,
 		Name:          "gogoproto.goproto_enum_prefix",
@@ -58,7 +58,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.EnumOptions)(nil),
+		ExtendedType:  (*descriptorpb.EnumOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         62021,
 		Name:          "gogoproto.goproto_enum_stringer",
@@ -66,7 +66,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.EnumOptions)(nil),
+		ExtendedType:  (*descriptorpb.EnumOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         62022,
 		Name:          "gogoproto.enum_stringer",
@@ -74,7 +74,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.EnumOptions)(nil),
+		ExtendedType:  (*descriptorpb.EnumOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         62023,
 		Name:          "gogoproto.enum_customname",
@@ -82,7 +82,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.EnumOptions)(nil),
+		ExtendedType:  (*descriptorpb.EnumOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         62024,
 		Name:          "gogoproto.enumdecl",
@@ -90,7 +90,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.EnumValueOptions)(nil),
+		ExtendedType:  (*descriptorpb.EnumValueOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         66001,
 		Name:          "gogoproto.enumvalue_customname",
@@ -98,7 +98,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63001,
 		Name:          "gogoproto.goproto_getters_all",
@@ -106,7 +106,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63002,
 		Name:          "gogoproto.goproto_enum_prefix_all",
@@ -114,7 +114,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63003,
 		Name:          "gogoproto.goproto_stringer_all",
@@ -122,7 +122,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63004,
 		Name:          "gogoproto.verbose_equal_all",
@@ -130,7 +130,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63005,
 		Name:          "gogoproto.face_all",
@@ -138,7 +138,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63006,
 		Name:          "gogoproto.gostring_all",
@@ -146,7 +146,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63007,
 		Name:          "gogoproto.populate_all",
@@ -154,7 +154,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63008,
 		Name:          "gogoproto.stringer_all",
@@ -162,7 +162,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63009,
 		Name:          "gogoproto.onlyone_all",
@@ -170,7 +170,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63013,
 		Name:          "gogoproto.equal_all",
@@ -178,7 +178,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63014,
 		Name:          "gogoproto.description_all",
@@ -186,7 +186,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63015,
 		Name:          "gogoproto.testgen_all",
@@ -194,7 +194,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63016,
 		Name:          "gogoproto.benchgen_all",
@@ -202,7 +202,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63017,
 		Name:          "gogoproto.marshaler_all",
@@ -210,7 +210,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63018,
 		Name:          "gogoproto.unmarshaler_all",
@@ -218,7 +218,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63019,
 		Name:          "gogoproto.stable_marshaler_all",
@@ -226,7 +226,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63020,
 		Name:          "gogoproto.sizer_all",
@@ -234,7 +234,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63021,
 		Name:          "gogoproto.goproto_enum_stringer_all",
@@ -242,7 +242,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63022,
 		Name:          "gogoproto.enum_stringer_all",
@@ -250,7 +250,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63023,
 		Name:          "gogoproto.unsafe_marshaler_all",
@@ -258,7 +258,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63024,
 		Name:          "gogoproto.unsafe_unmarshaler_all",
@@ -266,7 +266,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63025,
 		Name:          "gogoproto.goproto_extensions_map_all",
@@ -274,7 +274,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63026,
 		Name:          "gogoproto.goproto_unrecognized_all",
@@ -282,7 +282,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63027,
 		Name:          "gogoproto.gogoproto_import",
@@ -290,7 +290,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63028,
 		Name:          "gogoproto.protosizer_all",
@@ -298,7 +298,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63029,
 		Name:          "gogoproto.compare_all",
@@ -306,7 +306,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63030,
 		Name:          "gogoproto.typedecl_all",
@@ -314,7 +314,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63031,
 		Name:          "gogoproto.enumdecl_all",
@@ -322,7 +322,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63032,
 		Name:          "gogoproto.goproto_registration",
@@ -330,7 +330,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63033,
 		Name:          "gogoproto.messagename_all",
@@ -338,7 +338,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63034,
 		Name:          "gogoproto.goproto_sizecache_all",
@@ -346,7 +346,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FileOptions)(nil),
+		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         63035,
 		Name:          "gogoproto.goproto_unkeyed_all",
@@ -354,7 +354,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64001,
 		Name:          "gogoproto.goproto_getters",
@@ -362,7 +362,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64003,
 		Name:          "gogoproto.goproto_stringer",
@@ -370,7 +370,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64004,
 		Name:          "gogoproto.verbose_equal",
@@ -378,7 +378,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64005,
 		Name:          "gogoproto.face",
@@ -386,7 +386,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64006,
 		Name:          "gogoproto.gostring",
@@ -394,7 +394,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64007,
 		Name:          "gogoproto.populate",
@@ -402,7 +402,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         67008,
 		Name:          "gogoproto.stringer",
@@ -410,7 +410,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64009,
 		Name:          "gogoproto.onlyone",
@@ -418,7 +418,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64013,
 		Name:          "gogoproto.equal",
@@ -426,7 +426,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64014,
 		Name:          "gogoproto.description",
@@ -434,7 +434,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64015,
 		Name:          "gogoproto.testgen",
@@ -442,7 +442,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64016,
 		Name:          "gogoproto.benchgen",
@@ -450,7 +450,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64017,
 		Name:          "gogoproto.marshaler",
@@ -458,7 +458,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64018,
 		Name:          "gogoproto.unmarshaler",
@@ -466,7 +466,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64019,
 		Name:          "gogoproto.stable_marshaler",
@@ -474,7 +474,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64020,
 		Name:          "gogoproto.sizer",
@@ -482,7 +482,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64023,
 		Name:          "gogoproto.unsafe_marshaler",
@@ -490,7 +490,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64024,
 		Name:          "gogoproto.unsafe_unmarshaler",
@@ -498,7 +498,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64025,
 		Name:          "gogoproto.goproto_extensions_map",
@@ -506,7 +506,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64026,
 		Name:          "gogoproto.goproto_unrecognized",
@@ -514,7 +514,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64028,
 		Name:          "gogoproto.protosizer",
@@ -522,7 +522,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64029,
 		Name:          "gogoproto.compare",
@@ -530,7 +530,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64030,
 		Name:          "gogoproto.typedecl",
@@ -538,7 +538,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64033,
 		Name:          "gogoproto.messagename",
@@ -546,7 +546,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64034,
 		Name:          "gogoproto.goproto_sizecache",
@@ -554,7 +554,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.MessageOptions)(nil),
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         64035,
 		Name:          "gogoproto.goproto_unkeyed",
@@ -562,7 +562,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         65001,
 		Name:          "gogoproto.nullable",
@@ -570,7 +570,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         65002,
 		Name:          "gogoproto.embed",
@@ -578,7 +578,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         65003,
 		Name:          "gogoproto.customtype",
@@ -586,7 +586,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         65004,
 		Name:          "gogoproto.customname",
@@ -594,7 +594,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         65005,
 		Name:          "gogoproto.jsontag",
@@ -602,7 +602,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         65006,
 		Name:          "gogoproto.moretags",
@@ -610,7 +610,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         65007,
 		Name:          "gogoproto.casttype",
@@ -618,7 +618,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         65008,
 		Name:          "gogoproto.castkey",
@@ -626,7 +626,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*string)(nil),
 		Field:         65009,
 		Name:          "gogoproto.castvalue",
@@ -634,7 +634,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         65010,
 		Name:          "gogoproto.stdtime",
@@ -642,7 +642,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         65011,
 		Name:          "gogoproto.stdduration",
@@ -650,7 +650,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 		Filename:      "gogo.proto",
 	},
 	{
-		ExtendedType:  (*descriptor.FieldOptions)(nil),
+		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*bool)(nil),
 		Field:         65012,
 		Name:          "gogoproto.wktpointer",
@@ -659,7 +659,7 @@ var file_gogo_proto_extTypes = []protoimpl.ExtensionInfo{
 	},
 }
 
-// Extension fields to descriptor.EnumOptions.
+// Extension fields to descriptorpb.EnumOptions.
 var (
 	// optional bool goproto_enum_prefix = 62001;
 	E_GoprotoEnumPrefix = &file_gogo_proto_extTypes[0]
@@ -673,13 +673,13 @@ var (
 	E_Enumdecl = &file_gogo_proto_extTypes[4]
 )
 
-// Extension fields to descriptor.EnumValueOptions.
+// Extension fields to descriptorpb.EnumValueOptions.
 var (
 	// optional string enumvalue_customname = 66001;
 	E_EnumvalueCustomname = &file_gogo_proto_extTypes[5]
 )
 
-// Extension fields to descriptor.FileOptions.
+// Extension fields to descriptorpb.FileOptions.
 var (
 	// optional bool goproto_getters_all = 63001;
 	E_GoprotoGettersAll = &file_gogo_proto_extTypes[6]
@@ -747,7 +747,7 @@ var (
 	E_GoprotoUnkeyedAll = &file_gogo_proto_extTypes[37]
 )
 
-// Extension fields to descriptor.MessageOptions.
+// Extension fields to descriptorpb.MessageOptions.
 var (
 	// optional bool goproto_getters = 64001;
 	E_GoprotoGetters = &file_gogo_proto_extTypes[38]
@@ -803,7 +803,7 @@ var (
 	E_GoprotoUnkeyed = &file_gogo_proto_extTypes[63]
 )
 
-// Extension fields to descriptor.FieldOptions.
+// Extension fields to descriptorpb.FieldOptions.
 var (
 	// optional bool nullable = 65001;
 	E_Nullable = &file_gogo_proto_extTypes[64]
@@ -1182,11 +1182,11 @@ var file_gogo_proto_rawDesc = []byte{
 }
 
 var file_gogo_proto_goTypes = []interface{}{
-	(*descriptor.EnumOptions)(nil),      // 0: google.protobuf.EnumOptions
-	(*descriptor.EnumValueOptions)(nil), // 1: google.protobuf.EnumValueOptions
-	(*descriptor.FileOptions)(nil),      // 2: google.protobuf.FileOptions
-	(*descriptor.MessageOptions)(nil),   // 3: google.protobuf.MessageOptions
-	(*descriptor.FieldOptions)(nil),     // 4: google.protobuf.FieldOptions
+	(*descriptorpb.EnumOptions)(nil),      // 0: google.protobuf.EnumOptions
+	(*descriptorpb.EnumValueOptions)(nil), // 1: google.protobuf.EnumValueOptions
+	(*descriptorpb.FileOptions)(nil),      // 2: google.protobuf.FileOptions
+	(*descriptorpb.MessageOptions)(nil),   // 3: google.protobuf.MessageOptions
+	(*descriptorpb.FieldOptions)(nil),     // 4: google.protobuf.FieldOptions
 }
 var file_gogo_proto_depIdxs = []int32{
 	0,  // 0: gogoproto.goproto_enum_prefix:extendee -> google.protobuf.EnumOptions

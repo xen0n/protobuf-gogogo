@@ -28,7 +28,8 @@
 
 regenerate:
 	#go install github.com/gogo/protobuf/protoc-gen-gogo
-	protoc --gogogo_out=Mgoogle/protobuf/descriptor.proto=github.com/gogo/protobuf/protoc-gen-gogo/descriptor:../../../../ --proto_path=../../../../:../protobuf/:. *.proto
+	protoc --gogogo_out=Mgoogle/protobuf/descriptor.proto=github.com/xen0n/protobuf-gogogo/types/descriptorpb:../../../../ --proto_path=../../../../:../protobuf/:. *.proto
+	sed -i 's@"google.golang.org/protobuf@"github.com/xen0n/protobuf-gogogo@' gogo.pb.go
 
 restore:
 	cp gogo.pb.golden gogo.pb.go
