@@ -725,7 +725,16 @@ func fieldDefaultValue(g *protogen.GeneratedFile, m *messageInfo, field *protoge
 }
 
 func fieldJSONTagValue(field *protogen.Field) string {
-	return string(field.Desc.Name()) + ",omitempty"
+	// gogo: jsontag
+	var jsontag string
+	{
+		fieldOpt := field.Desc.Options().(*descriptorpb.FieldOptions)
+		jsontag = proto.GetExtension(fieldOpt, gogoproto.E_Jsontag).(string)
+	}
+	if jsontag == "" {
+		jsontag = string(field.Desc.Name())
+	}
+	return jsontag + ",omitempty"
 }
 
 func genExtensions(g *protogen.GeneratedFile, f *fileInfo) {
