@@ -25,6 +25,9 @@ import (
 
 	"github.com/xen0n/protobuf-gogogo/types/descriptorpb"
 	"github.com/xen0n/protobuf-gogogo/types/pluginpb"
+
+	"github.com/xen0n/protobuf-gogogo/gogoproto"
+	"github.com/xen0n/protobuf-gogogo/proto"
 )
 
 // SupportedFeatures reports the set of supported protobuf language features.
@@ -410,6 +413,14 @@ func genMessageField(g *protogen.GeneratedFile, f *fileInfo, m *messageInfo, fie
 	}
 	if m.isTracked {
 		tags = append(tags, gotrackTags...)
+	}
+
+	// gogo: moretags
+	{
+		fieldOpts := field.Desc.Options().(*descriptorpb.FieldOptions)
+		moreTagsDecl := proto.GetExtension(fieldOpts, gogoproto.E_Moretags).(string)
+		moreTags := parseMoretags(moreTagsDecl)
+		tags = append(tags, moreTags...)
 	}
 
 	name := field.GoName
