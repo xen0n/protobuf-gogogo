@@ -51,12 +51,12 @@ const (
 // patched to support unique build environments that impose restrictions
 // on the dependencies of generated source code.
 var (
-	protoPackage         goImportPath = protogen.GoImportPath("github.com/xen0n/protobuf-gogogo/proto")
-	protoifacePackage    goImportPath = protogen.GoImportPath("github.com/xen0n/protobuf-gogogo/runtime/protoiface")
-	protoimplPackage     goImportPath = protogen.GoImportPath("github.com/xen0n/protobuf-gogogo/runtime/protoimpl")
-	protojsonPackage     goImportPath = protogen.GoImportPath("github.com/xen0n/protobuf-gogogo/encoding/protojson")
-	protoreflectPackage  goImportPath = protogen.GoImportPath("github.com/xen0n/protobuf-gogogo/reflect/protoreflect")
-	protoregistryPackage goImportPath = protogen.GoImportPath("github.com/xen0n/protobuf-gogogo/reflect/protoregistry")
+	protoPackage         goImportPath = protogen.GoImportPath("google.golang.org/protobuf/proto")
+	protoifacePackage    goImportPath = protogen.GoImportPath("google.golang.org/protobuf/runtime/protoiface")
+	protoimplPackage     goImportPath = protogen.GoImportPath("google.golang.org/protobuf/runtime/protoimpl")
+	protojsonPackage     goImportPath = protogen.GoImportPath("google.golang.org/protobuf/encoding/protojson")
+	protoreflectPackage  goImportPath = protogen.GoImportPath("google.golang.org/protobuf/reflect/protoreflect")
+	protoregistryPackage goImportPath = protogen.GoImportPath("google.golang.org/protobuf/reflect/protoregistry")
 )
 
 type goImportPath interface {
