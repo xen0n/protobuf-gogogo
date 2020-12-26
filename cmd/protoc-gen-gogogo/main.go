@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-// The protoc-gen-go binary is a protoc plugin to generate Go code for
+// The protoc-gen-gogogo binary is a protoc plugin to generate Go code for
 // both proto2 and proto3 versions of the protocol buffer language.
 //
 // For more information about the usage of this plugin, see:
@@ -16,7 +16,7 @@ import (
 	"os"
 	"path/filepath"
 
-	gengo "github.com/xen0n/protobuf-gogogo/cmd/protoc-gen-go/internal_gengo"
+	gengo "github.com/xen0n/protobuf-gogogo/cmd/protoc-gen-gogogo/internal_gengo"
 	"github.com/xen0n/protobuf-gogogo/compiler/protogen"
 	"github.com/xen0n/protobuf-gogogo/internal/version"
 )
@@ -36,10 +36,10 @@ func main() {
 		ParamFunc: flags.Set,
 	}.Run(func(gen *protogen.Plugin) error {
 		if *plugins != "" {
-			return errors.New("protoc-gen-go: plugins are not supported; use 'protoc --go-grpc_out=...' to generate gRPC")
+			return errors.New("protoc-gen-gogogo: plugins are not supported; use 'protoc --go-grpc_out=...' to generate gRPC")
 		}
 		if *importPrefix != "" {
-			return errors.New("protoc-gen-go: import_prefix is not supported")
+			return errors.New("protoc-gen-gogogo: import_prefix is not supported")
 		}
 		for _, f := range gen.Files {
 			if f.Generate {
