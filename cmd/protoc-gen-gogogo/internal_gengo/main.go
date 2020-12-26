@@ -238,8 +238,21 @@ func genEnum(g *protogen.GeneratedFile, f *fileInfo, e *enumInfo) {
 		g.Annotate(value.GoIdent.GoName, value.Location)
 		leadingComments := appendDeprecationSuffix(value.Comments.Leading,
 			value.Desc.Options().(*descriptorpb.EnumValueOptions).GetDeprecated())
+
+		// gogo: enumvalue_customname
+		var valueName string
+		{
+			enumValueOpts := value.Desc.Options().(*descriptorpb.EnumValueOptions)
+			valueName = proto.GetExtension(enumValueOpts, gogoproto.E_EnumvalueCustomname).(string)
+		}
+		if valueName == "" {
+			// duplicating behavior of g.P, but directly taking the GoName should
+			// also work because of the syntactic context (const declaration)
+			valueName = g.QualifiedGoIdent(value.GoIdent)
+		}
+
 		g.P(leadingComments,
-			value.GoIdent, " ", e.GoIdent, " = ", value.Desc.Number(),
+			valueName, " ", e.GoIdent, " = ", value.Desc.Number(),
 			trailingComment(value.Comments.Trailing))
 	}
 	g.P(")")
